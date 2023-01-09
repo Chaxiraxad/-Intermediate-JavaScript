@@ -186,23 +186,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
-
-
-
-
-// for - We are going to start a for loop
-// var i = 0 - we are creating a variable that we are going to loop over
-// i < 5 - The condition to continue the loop
-// i++ - After we run the code, we increase our looping variable by 1 i++ === i = i +1
-
-// var passwordLength = 12
-
-// var finalArr = ['a','b','c', 'd', 'e', 'f', 'g', 'h', 'i']
-// var password = ''
-// for (var i = 0; i < passwordLength; i++) {
-//   var randomIndex = Math.floor(Math.random() * finalArr.length)
-// var randomChar = finalArr[randomIndex]
-// password += randomChar
-  
-// }
-// console.log(password)
