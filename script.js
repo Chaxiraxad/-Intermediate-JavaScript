@@ -58,7 +58,7 @@ var lowerCasedCharacters = [
   'z'
 ];
 
-var finalChoice = []
+
 // Array of uppercase characters to be included in password
 var upperCasedCharacters = [
   'A',
@@ -88,6 +88,8 @@ var upperCasedCharacters = [
   'Y',
   'Z'
 ];
+
+var finalChoice = []
 
 // Function to prompt user for password options
 function getPasswordOptions() {
@@ -137,7 +139,7 @@ var numericChoice = confirm("Would you like numbers in your password?")
 console.log(numericChoice)
 passwordChoice.numeric = numericChoice
 
-if (numberChoice === true) {
+if (numericChoice === true) {
   finalChoice = numericCharacters.concat(finalChoice)
   console.log(finalChoice)
   }
@@ -152,25 +154,30 @@ if (specialcharactersChoice === true) {
   }
 
 
-
+  console.log(finalChoice)
   return passwordChoice
+  
 }
 
 //   if (finalChoice === [])
-// alert("Please select at least one option")
+// alert("Please select at leasts one option")
 
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  return arr[Math.floor(Math.random() * arr.length)];
 }
+
 
 // Function to generate password with user input
 function generatePassword() {
-  
   var passwordChoice = getPasswordOptions()
-  console.log(passwordChoice)
-  return "I'm generating a password"
+  if(!passwordChoice) return
+  var generatedPassword = ""
+  for (var i = 0; i < passwordChoice.length; i++) {
+    generatedPassword += getRandom(finalChoice);
+  }
+  return generatedPassword
 }
 
 // Get references to the #generate element
