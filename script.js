@@ -153,15 +153,15 @@ if (specialcharactersChoice === true) {
   console.log(finalChoice)
   }
 
+  else {
+    alert("Error: Please select at least one character type")
+  }
+  
 
   console.log(finalChoice)
   return passwordChoice
   
 }
-
-//   if (finalChoice === [])
-// alert("Please select at leasts one option")
-
 
 // Function for getting a random element from an array
 function getRandom(arr) {
