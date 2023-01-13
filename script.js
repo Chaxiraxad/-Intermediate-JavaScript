@@ -94,14 +94,14 @@ var finalChoice = []
 // Function to prompt user for password options
 function getPasswordOptions() {
 
-var passwordChoice =  {
-  length : 0,
-  lowercase : false,
-  uppercase : false,
-  numeric : false,
-  specialcharacters : false,
+  var passwordChoice = {
+    length: 0,
+    lowercase: false,
+    uppercase: false,
+    numeric: false,
+    specialcharacters: false,
 
-}
+  }
 
   var validNumber = false
   while (validNumber === false) {
@@ -115,52 +115,59 @@ var passwordChoice =  {
     }
 
   }
-console.log("the loop has finished!!!")
+  console.log("the loop has finished!!!")
+var lowercaseChoice = false
+var uppercaseChoice = false
+var numericChoice = false
+var specialcharactersChoice = false
 
-var lowercaseChoice = confirm("Would you like lowercase letters in your password?")
-console.log(lowercaseChoice)
-passwordChoice.lowercase = lowercaseChoice
+while(lowercaseChoice === false && uppercaseChoice === false && numericChoice === false && specialcharactersChoice === false) {
+ lowercaseChoice = confirm("Would you like lowercase letters in your password?")
+  console.log(lowercaseChoice)
+  passwordChoice.lowercase = lowercaseChoice
 
-if (lowercaseChoice === true) {
-finalChoice = lowerCasedCharacters.concat(finalChoice)
-console.log(finalChoice)
-}
-
-var uppercaseChoice = confirm("Would you like uppercase letters in your password?")
-console.log(uppercaseChoice)
-passwordChoice.uppercase = uppercaseChoice
-
-if (uppercaseChoice === true) {
-  finalChoice = upperCasedCharacters.concat(finalChoice)
-  console.log(finalChoice)
+  if (lowercaseChoice === true) {
+    finalChoice = lowerCasedCharacters.concat(finalChoice)
+    console.log(finalChoice)
   }
 
-var numericChoice = confirm("Would you like numbers in your password?")
-console.log(numericChoice)
-passwordChoice.numeric = numericChoice
+  uppercaseChoice = confirm("Would you like uppercase letters in your password?")
+  console.log(uppercaseChoice)
+  passwordChoice.uppercase = uppercaseChoice
 
-if (numericChoice === true) {
-  finalChoice = numericCharacters.concat(finalChoice)
-  console.log(finalChoice)
+  if (uppercaseChoice === true) {
+    finalChoice = upperCasedCharacters.concat(finalChoice)
+    console.log(finalChoice)
   }
 
-var specialcharactersChoice = confirm("Would you like special characters in your password?")
-console.log(specialcharactersChoice)
-passwordChoice.specialcharacters = specialcharactersChoice
+ numericChoice = confirm("Would you like numbers in your password?")
+  console.log(numericChoice)
+  passwordChoice.numeric = numericChoice
 
-if (specialcharactersChoice === true) {
-  finalChoice = specialCharacters.concat(finalChoice)
-  console.log(finalChoice)
+  if (numericChoice === true) {
+    finalChoice = numericCharacters.concat(finalChoice)
+    console.log(finalChoice)
   }
 
-  else {
+  specialcharactersChoice = confirm("Would you like special characters in your password?")
+  console.log(specialcharactersChoice)
+  passwordChoice.specialcharacters = specialcharactersChoice
+
+  if (specialcharactersChoice === true) {
+    finalChoice = specialCharacters.concat(finalChoice)
+    console.log(finalChoice)
+  }
+
+  if (lowercaseChoice === false && uppercaseChoice === false && numericChoice === false && specialcharactersChoice === false) {
     alert("Error: Please select at least one character type")
   }
+}
   
+
 
   console.log(finalChoice)
   return passwordChoice
-  
+
 }
 
 // Function for getting a random element from an array
@@ -172,7 +179,7 @@ function getRandom(arr) {
 // Function to generate password with user input
 function generatePassword() {
   var passwordChoice = getPasswordOptions()
-  if(!passwordChoice) return
+  if (!passwordChoice) return
   var generatedPassword = ""
   for (var i = 0; i < passwordChoice.length; i++) {
     generatedPassword += getRandom(finalChoice);
