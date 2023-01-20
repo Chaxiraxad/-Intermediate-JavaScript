@@ -20,7 +20,7 @@ Create an application that an employee can use to generate a random password bas
 4.Once prompts are answered then the password should be generated and displayed in an alert or written to the page
 
 ## Installation
- git clone (git@github.com:Chaxiraxad/Intermediate-JavaScript.git)
+ git repository (https://github.com/Chaxiraxad/Intermediate-JavaScript.git)
 
 ## Deployment
 [Project Link] ( https://chaxiraxad.github.io/Intermediate-JavaScript/)
