@@ -25,7 +25,7 @@ Create an application that an employee can use to generate a random password bas
 ## Deployment
 [Project Link] ( https://chaxiraxad.github.io/Intermediate-JavaScript/)
 
-(ScreenShot) ![JavaScript-Fundamentalsdeployed website](./assets/deployedwebsite.png)*****update
+(ScreenShot) ![JavaScript-Fundamentalsdeployed website](./assets/deployedwebsite.png)
 
 ## Usage
 N/A
